@@ -1,5 +1,6 @@
 package Modelo;
 
+import Clases.Persona;
 import DAO.Dao;
 
 public class App {
@@ -7,7 +8,10 @@ public class App {
 	public static void main(String[] args) {
 		Dao dao = new Dao();
 		
-		dao.eliminarConFiltro("3");	
+		
+		for(String a: dao.consultas()) {
+			System.out.println(a);
+		}
 		
 	}
 
