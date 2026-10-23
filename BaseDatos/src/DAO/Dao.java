@@ -86,13 +86,13 @@ public class Dao {
 	
 	
 	
-	public void eliminarConFiltro(String id) {
+	public void eliminarConFiltro(String dni) {
 		Connection conexion = null;
 		
 		try {
 			conexion = conectar();
 			Statement stat = conexion.createStatement();
-			sqlDelFiltro =  "DELETE FROM `basedegatos`.`persona`WHERE IdPersona = " + id;
+			sqlDelFiltro =  "DELETE FROM `basedegatos`.`persona`WHERE dni = " + dni;
 			int filas = stat .executeUpdate(sqlDelFiltro);
 			System.out.println(filas);
 			
